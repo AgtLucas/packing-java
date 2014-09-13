@@ -1,6 +1,5 @@
 package gov.cia;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class BestFit {
