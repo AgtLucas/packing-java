@@ -48,7 +48,7 @@ public class BestFit {
 			for (j = 0; j < mem; j++) {
 				if (segMemoria[j] >= tamProcessos[i]) {
 					segMemoria[j] -= tamProcessos[i];
-					System.out.println("Process " + (i + 1) + " alocado no espaço de memória " + (j + 1));
+					System.out.println("Processo " + (i + 1) + " alocado no espaço de memória " + (j + 1));
 					System.out.println("Espaço restante após a alocação " + segMemoria[j]);
 					System.out.println("AEHOOOOOO");
 					break;
