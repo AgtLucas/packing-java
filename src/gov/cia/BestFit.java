@@ -5,11 +5,13 @@ import java.util.Scanner;
 
 public class BestFit {
 	
+	private static Scanner in;
+
 	public static void main(String[] args) {
 		
 		int proc, mem;
 		
-		Scanner in = new Scanner(System.in);
+		in = new Scanner(System.in);
 		
 		System.out.println("Número de processos: ");
 		proc = in.nextInt();
