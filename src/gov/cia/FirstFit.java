@@ -47,16 +47,14 @@ public class FirstFit {
 				j = j + 1;
 				memArrayAux[i] = 1;
 				i = 0;
-				if (j == proc) {
+				if (j == proc)
 					i = mem;
-				}
 				
 			}
 			
 		}
-		if (j < proc) {
+		if (j < proc)
 			System.out.println("Erro!");
-		}
 		
 	}
 
