@@ -54,6 +54,7 @@ public class NextFit {
 				
 			}
 			if (i == (mem - 1)) {
+				
 				if (shallNotPass == 1)
 					i = 0;
 				else
