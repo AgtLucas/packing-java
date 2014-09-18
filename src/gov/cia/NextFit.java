@@ -49,21 +49,25 @@ public class NextFit {
 				j = j + 1;
 				shallNotPass = 1;
 				memArrayAux[i] = 1;
-				if (j == proc)
+				if (j == proc) {
 					i = mem;
+				}
 				
 			}
 			if (i == (mem - 1)) {
 				
-				if (shallNotPass == 1)
+				if (shallNotPass == 1) {
 					i = 0;
-				else
+				}
+				else {
 					System.out.println("Acabou a memória, fera.");
+				}
 			}
 			
 		}
-		if (j < proc)
+		if (j < proc) {
 			System.out.println("Acabou a memória, pow!");
+		}
 		
 	}
 

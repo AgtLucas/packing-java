@@ -9,8 +9,8 @@ public class FirstFit {
 	public static void main(String[] args) {
 		
 		in = new Scanner(System.in);
-		System.out.println("Digite o número de processos: ");
 		
+		System.out.println("Digite o número de processos: ");
 		int proc = in.nextInt();
 		
 		System.out.println("Digite o número de blocos de memória: ");
