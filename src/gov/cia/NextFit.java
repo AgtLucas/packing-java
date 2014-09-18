@@ -42,7 +42,7 @@ public class NextFit {
 		
 		for (i = 0; i < mem; i++) {
 			
-			if (memArray[i] > procArray[j] && memArray[i] == 0) {
+			if (memArray[i] > procArray[j] && memArrayAux[i] == 0) {
 				
 				memArray[i] -= procArray[j];
 				System.out.println("Alocado processo " + (j + 1) + " para memória " + (i + 1) + " depois de alocar ficou " + memArray[i]);
