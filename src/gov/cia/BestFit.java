@@ -18,7 +18,7 @@ public class BestFit {
 		mem = in.nextInt();
 		
 		int tamProcessos[] = new int[proc];
-		int segMemoria[] = new int[mem];
+		BestFitMem bestFitMem[] = new BestFitMem[mem];
 		
 		int i;
 		
@@ -28,28 +28,33 @@ public class BestFit {
 		}
 		
 		for (i = 0; i < mem; i++) {
-			System.out.println("Entre o tamanho do segmento de memória: " + (i + 1));
-			segMemoria[i] = in.nextInt();
+			System.out.println("Entre o tamanho do segmento de memória: " + i);
+			
+			BestFitMem segMem = new BestFitMem();
+			segMem.id = i;
+			segMem.size = in.nextInt();
+			bestFitMem[i - 1] = segMem;
+			
 		}
 		
 		int j;
 		
 		for (i = 0; i < mem; i++) {
 			for (j = i + 1; j < mem; j++) {
-				if (segMemoria[i] > segMemoria[j]) {
-					int t = segMemoria[i];
-					segMemoria[i] = segMemoria[j];
-					segMemoria[j] = t;
+				if (bestFitMem[i].size > bestFitMem[j].size) {
+					BestFitMem t = bestFitMem[i];
+					bestFitMem[i] = bestFitMem[j];
+					bestFitMem[j] = t;
 				}
 			}
 		}
 		
 		for (i = 0; i < proc; i++) {
 			for (j = 0; j < mem; j++) {
-				if (segMemoria[j] >= tamProcessos[i]) {
-					segMemoria[j] -= tamProcessos[i];
+				if (bestFitMem[j].size >= tamProcessos[i]) {
+					bestFitMem[j].size -= tamProcessos[i];
 					System.out.println("Processo " + (i + 1) + " alocado no espaço de memória " + (j + 1));
-					System.out.println("Espaço restante após a alocação " + segMemoria[j]);
+					System.out.println("Espaço restante após a alocação " + bestFitMem[j]);
 					System.out.println("AEHOOOOOO");
 					break;
 				}
